@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>3D Printer Dry Fillament</title>
     <style>
-        body { font-family: Arial, sans-serif; zoom: 2; }
+        body { font-family: Arial, sans-serif; zoom: 1.5; }
         .container { width: 600px; margin: 20px auto; }
         .form-group { margin-bottom: 10px; }
         .form-group label { display: block; }
@@ -108,7 +108,7 @@
 
             if (enableHoming) {
                 gcode += '; Homing XY axes\n';
-                gcode += 'G28 X Y\n';
+                gcode += 'G28 X Y Z\n';
                 gcode += '; Moving Z-axis to specified height\n';
                 gcode += 'G1 Z' + zHeight + ' F600\n';
             }
